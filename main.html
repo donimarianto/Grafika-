@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvasKu" width="900" height="480" style="border: 1px solid red"></canvas>
+    <script>
+        var canvas = document.getElementById("canvasKu");
+        var ctx = canvas.getContext("2d");
+        ctx.fillRect(10,10,100,100);
+        ctx.fillRect(120,10,100,100);
+        ctx.fillRect(230,10,100,100);
+
+        // ctx.beginPath();
+        // ctx.moveTo(10,10);
+        // ctx.lineTo(50,50);
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.moveTo(100,100);
+        // ctx.lineTo(100,300);
+        // ctx.lineTo(300,300);
+        // ctx.closePath();
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        // ctx.stroke();
+
+        // ctx.font="30px arial";
+        // ctx.fillStyle ="#c82124";
+        // ctx.fillText("latihan:", 10,50);
+
+        // ctx.font = "64px Arial";
+        // ctx.strokeStyle ="#17594A";
+        // ctx.strokeText("Membuat Canvas", 10,120); 
+    </script>
+
+    <p>Image</p>
+    <img src="https://th.bing.com/th/id/OIP.Tc3teU4_s_7APPYKmQP8UwHaJQ?rs=1&pid=ImgDetMain"
+     alt="kucingku" id="kucing" width="220" height="277">
+        <p><button onclick="renderImage()">Render Image</button></p>
+     <script>
+        function renderImage(){
+        var canvas = document.getElementById("canvasku");
+        var ctx = canvas.getContext("2d");
+
+        var img =document.getElementById("kucing");
+        ctx.drawImage(img, 10, 10);}
+     </script>
+     <canvas id="canvasku" width="480" height="590" style="border: 1px solid red"></canvas>
+</body>
+</html>
